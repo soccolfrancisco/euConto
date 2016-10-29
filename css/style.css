@@ -1,23 +1,4 @@
-/* Thomsoon.com - OnePage CSS Responsive theme
--- version 1.0
--- Copyright (c) 2014 Thomsoon.com
--- licensed under the MIT
---
--- http://www.thomsoon.com/free-onepage-theme-html5.html
---
-*/
-
-
-/* Font Google - strong reaload time */
-
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,700,900&subset=latin,latin-ext);
-
-/*
-* Theme Name: Onepage
-* Author: Thomsoon
-* Created: 15/02/2014
-*/
-
 html,
 body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -35,7 +16,7 @@ a {
 }
 
 h1 {
-    font-size: 66px;
+    font-size: 56px;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -81,30 +62,63 @@ h2 span {
 }
 
 .video {
+    display: block;
     width: 100%;
     height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: 0 auto;
+    width: 61%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.modal-body {
+    width: 900px;
 }
 
 
-/* Start page */
+/*----------------------------------------------------------- Start page --------------------------------------------------------*/
 
 .start-page {
     position: relative;
+    overflow: hidden;
+    display: block;
     width: 100%;
-    height: 580px;
-    background: url('../img/background/EC3.png') fixed;
+    height: 650px;
+    background: url('../img/background/EC2.png') center 0px fixed;
+    background-size: cover;
 }
 
 .start-page .opacity {
     position: absolute;
     width: 100%;
-    height: 580px;
+    height: 650px;
     background: rgba(0, 0, 0, 0.2);
 }
 
 .start-page .content {
     position: relative;
-    width: 900px;
+    width: 100%;
     margin: 0 auto;
     height: 580px;
 }
@@ -113,30 +127,18 @@ h2 span {
     position: absolute;
     text-align: center;
     margin: auto;
-    top: 0;
+    top: 600px;
     left: 0;
     bottom: 0;
     right: 0;
-    width: 500px;
-    height: 320px;
-}
-
-.start-page .content .text {
-    position: absolute;
-    text-align: center;
-    margin: auto;
-    top: 100px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 500px;
+    width: 40%;
     height: 320px;
 }
 
 .start-page .content .text .read-more {
-    width: 183px;
+    width: 100%;
     height: 47px;
-    margin: 260px auto;
+    margin: 0 auto;
     line-height: 47px;
     border: 1px solid white;
     text-transform: uppercase;
@@ -158,9 +160,7 @@ h2 span {
 
 .start-page .content .arrow-down {
     position: absolute;
-    bottom: 110px;
-    left: 50%;
-    margin-left: -10px;
+    margin: 0 49%;
     width: 21px;
     height: 29px;
     background: url(../img/arrow-down.png) no-repeat center center;
@@ -226,13 +226,14 @@ h2 span {
     position: relative;
     width: 100%;
     height: 90px;
-    background: #52658C;
+    background: #fff;
     z-index: 1000;
     display: none;
+    border-bottom: 1px solid #EAEAEA;
 }
 
 .menu-media .menu-content {
-    width: 280px;
+    width: 100%;
     position: relative;
     margin: 0 auto;
 }
@@ -241,16 +242,18 @@ h2 span {
     font-weight: 700;
     font-size: 30px;
     width: 200px;
+    padding: 0 10px;
     line-height: 90px;
     float: left;
     list-style: none;
 }
 
 .menu-media .menu-content .icon {
-    width: 41px;
-    height: 23px;
+    width: 31px;
+    height: 13px;
+    margin-right: 60px;
     float: right;
-    line-height: 100px;
+    line-height: 105px;
 }
 
 
@@ -266,7 +269,7 @@ h2 span {
 }
 
 .menu-content {
-    width: 900px;
+    width: 80%;
     position: relative;
     margin: 0 auto;
 }
@@ -282,19 +285,19 @@ h2 span {
 
 .menu-click {
     display: none;
+    width: 100%;
 }
 
 .menu-click li {
     position: relative;
     width: 100%;
-    height: 70px;
     color: white;
-    font-size: 29px;
+    font-size: 20px;
     text-align: center;
-    line-height: 70px;
-    background: #F06277;
+    line-height: 60px;
+    background: #52658C;
     z-index: 1000;
-    border-bottom: 1px solid #1a7966;
+    border-bottom: 1px solid #fff;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     -ms-transition: all 0.2s ease-in;
@@ -340,23 +343,22 @@ h2 span {
 }
 
 .menu-content li a:hover {
-    /*color: white;*/
     color: rgb(231, 93, 109);
 }
 
 
-/* About us */
+/* ------------------------------------------------------------ About ---------------------------------------------- us */
 
 .about-us {
     position: relative;
-    width: 1000px;
+    width: 80%;
     margin: 50px auto;
     overflow: hidden;
 }
 
 .about-us h1 {
     font-size: 56px;
-    color: #000;
+    color: #343434;
     text-align: center;
     margin-top: 50px;
     font-weight: bold;
@@ -365,7 +367,7 @@ h2 span {
 }
 
 .about-us hr {
-    color: #000;
+    color: #343434;
     margin-top: 30px;
     background-color: #000;
     height: 1px;
@@ -376,7 +378,7 @@ h2 span {
 .about-us p.title {
     color: #919191;
     margin-top: 40px;
-    width: 100%;
+    width: 90%;
     font-size: 15px;
     text-align: center;
 }
@@ -385,7 +387,7 @@ h2 span {
     text-align: center;
     margin-top: 20px;
     font-size: 29px;
-    color: #000;
+    color: #343434;
     line-height: 1.2;
     width: 100%;
     position: relative;
@@ -397,7 +399,7 @@ h2 span {
     margin-top: 20px;
     font-size: 15px;
     width: 100%;
-    color: #000;
+    color: #343434;
     line-height: 1.4;
     position: relative;
     font-weight: 400;
@@ -405,7 +407,7 @@ h2 span {
 
 .about-us .column-one {
     margin-top: 40px;
-    width: 480px;
+    width: 45%;
     float: left;
     margin-bottom: 70px;
     min-height: 350px;
@@ -430,12 +432,12 @@ h2 span {
 }
 
 .about-us .column-one .circle-one:hover {
-    background: url(../img/icons/projeto.png) #F06277 no-repeat center center;
+    background: url(../img/icons/projeto.png) #fff no-repeat center center;
 }
 
 .about-us .column-two {
     margin-top: 40px;
-    width: 480px;
+    width: 45%;
     float: right;
     margin-bottom: 70px;
     min-height: 350px;
@@ -460,7 +462,7 @@ h2 span {
 }
 
 .about-us .column-two .circle-two:hover {
-    background: url(../img/icons/missao.png) #F06277 no-repeat center center;
+    background: url(../img/icons/missao.png) #fff no-repeat center center;
 }
 
 .about-us .column-three {
@@ -495,7 +497,7 @@ h2 span {
 }
 
 
-/* Portfolio */
+/*---------------------------------------------------- Portfolio -------------------------------------------------------*/
 
 .portfolio {
     position: relative;
@@ -506,7 +508,7 @@ h2 span {
 
 .portfolio .portfolio-margin {
     position: relative;
-    width: 900px;
+    width: 80%;
     overflow: hidden;
     margin: 50px auto;
 }
@@ -560,7 +562,7 @@ h2 span {
 
 .grid {
     margin-top: 70px;
-    width: 100%;
+    width: 90%;
     position: relative;
     margin-bottom: 70px;
     overflow: hidden;
@@ -612,14 +614,44 @@ h2 span {
     clear: both;
 }
 
+.filterOptions {
+    margin: 3% auto;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+}
 
-/* Partners */
+.filterOptions li {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.filterOptions li a {
+    display: block;
+    font-size: 12pt;
+    padding: 5px 20px;
+    text-decoration: none;
+    cursor: default;
+}
+
+.filterOptions li a.active {
+    background: #fff;
+    color: #52658C;
+    border-radius: 5px;
+}
+
+
+/*------------------------------------------------------- Partners -----------------------------------------------------*/
 
 .partners {
     position: relative;
+    overflow: hidden;
+    display: block;
     width: 100%;
     height: 400px;
-    background: url('../img/background/EC6.png') fixed;
+    background: url('../img/background/EC6.png') center 0px fixed;
+    background-size: cover;
 }
 
 .partners .opacity {
@@ -631,7 +663,7 @@ h2 span {
 
 .partners .content {
     position: absolute;
-    width: 900px;
+    width: 80%;
     height: 160px;
     margin: auto;
     top: 0px;
@@ -649,7 +681,7 @@ h2 span {
 
 .partners .logo {
     position: relative;
-    width: 900px;
+    width: 100%;
     overflow: hidden;
     margin-top: 50px;
     text-align: center;
@@ -669,17 +701,17 @@ h2 span {
 }
 
 
-/* Contact */
+/*------------------------------------------------------- Contact -----------------------------------------------------*/
 
 .contact {
     position: relative;
-    width: 900px;
-    margin: 50px auto;
+    width: 80%;
+    margin: 5% auto 8% auto;
 }
 
 .contact h1 {
     font-size: 56px;
-    color: #000;
+    color: #343434;
     padding-top: 50px;
     text-align: center;
     font-weight: bold;
@@ -697,25 +729,25 @@ h2 span {
 
 .contact .content {
     position: relative;
-    width: 1000px;
+    width: 100%;
     overflow: hidden;
-    margin: 60px 0 65px 0;
+    margin: 5% auto;
 }
 
 .contact .content .form {
-    width: 455px;
+    width: 50%;
     overflow: hidden;
     height: auto;
     float: left;
 }
 
 .contact .content .contact-text {
-    width: 405px;
+    width: 45%;
     overflow: hidden;
     height: auto;
-    float: left;
+    float: right;
     padding-left: 40px;
-    color: black;
+    color: #343434;
     font-size: 17px;
     line-height: 1.7;
 }
@@ -725,12 +757,12 @@ strong {
 }
 
 input {
-    width: 420px;
+    width: 94%;
     height: 40px;
     background: #EAEAEA;
     border: 0;
     /*color: white;*/
-    color: black;
+    color: #343434;
     line-height: 40px;
     padding-left: 35px;
     -moz-border-radius: 4px;
@@ -742,8 +774,8 @@ input {
 }
 
 textarea {
-    width: 420px;
-    height: 283px;
+    width: 94%;
+    height: 120px;
     background: #EAEAEA;
     border: 0;
     /* color: white;*/
@@ -758,9 +790,8 @@ textarea {
 }
 
 .contact .content .form .button {
-    width: 142px;
+    width: 100%;
     height: 34px;
-    float: right;
     margin: 0;
     color: #fff;
     background: #52658C;
@@ -773,6 +804,7 @@ textarea {
     -ms-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
+    cursor: pointer;
 }
 
 .contact .content .form span .button {
@@ -785,23 +817,23 @@ textarea {
 
 .contact .content .form .button:hover {
     color: white;
-    /*background: #131a21;*/
     background: rgb(231, 93, 109);
 }
 
 
-/* Footer */
+/*------------------------------------------------------ Footer --------------------------------------------------------*/
 
 .footer {
     position: relative;
     width: 100%;
     height: 60px;
     background: #52658C;
+    color: #CCCCCC;
 }
 
 .margin {
     position: relative;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     height: 60px;
 }
@@ -823,7 +855,7 @@ textarea {
 }
 
 .menu-footer a:hover {
-    color: white;
+    color: aqua;
 }
 
 .copyright {
@@ -831,66 +863,18 @@ textarea {
     margin: 0 auto;
     text-align: center;
     line-height: 60px;
-    color: #fff;
+}
+
+.copyright a {
+    color: #CCCCCC;
+}
+
+.copyright a:hover {
+    color: #3A3A74;
 }
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-
-#filterOptions {
-    margin: 3% auto;
-    padding: 0;
-    text-align: center;
-}
-
-#filterOptions li {
-    width: 20%;
-    margin-left: 5%;
-    float: left;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-
-#filterOptions li a {
-    display: block;
-    padding: 5px 20px;
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-#filterOptions li a.active {
-    background: #F06277;
-    color: #fff;
-    border-radius: 5px;
-}
-
-
-/*----------------------------------------------------------------------------------------------------------------------*/
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 70px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-    width: 61%;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-}
 
 
 /* Animação */
@@ -929,7 +913,7 @@ textarea {
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: #343434;
     text-decoration: none;
     cursor: pointer;
 }

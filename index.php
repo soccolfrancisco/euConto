@@ -11,35 +11,13 @@
     <meta name="keywords" content="responsive, html5, onepage, themes, template, clean layout, free web" />
     <meta name="author" content="Thomsoon.com" />
 
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/logo/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="css/reset.css?date=<?php echo'datetime();'?>" />
     <link rel="stylesheet" type="text/css" href="css/style.css?date=<?php echo'datetime();'?>" />
     <link rel="stylesheet" type="text/css" href="css/style-responsive.css?date=<?php echo'datetime();'?>" />
 
     <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#filterOptions li a').click(function () {
-                // buscar a classe do item clicado
-                var ourClass = $(this).attr('class');
-
-                // redefinir a classe ativa em todos os botões
-                $('#filterOptions li a').removeClass('active');
-                // atualizar o estado ativo em nosso botão clicado
-                $(this).addClass('active');
-
-                if (ourClass == 'all') {
-                    $('#grid').children('li.all').show();
-                } else { // ocultar todos os elementos que não compartilham nossa classe
-                    $('#grid').children('li:not(.' + ourClass + ')').hide();
-                    // mostrar todos os elementos que fazem compartilhar nossa classe
-                    $('#grid').children('li.' + ourClass).show();
-                }
-                return false;
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -50,8 +28,6 @@
             <div class="opacity"></div>
             <div class="content">
                 <div class="text">
-                    <!--<h1>BEM VINDO<br/></h1>
-                    <h2>AO NOSSO <span>SITE</span></h2>-->
                     <a href="#about-us">
                         <div class="read-more">Conheça-nos</div>
                     </a>
@@ -63,7 +39,7 @@
         <!-- section menu mobile -->
         <section class="menu-media">
             <div class="menu-content">
-                <div class="logo"></div>
+                <div class="logo"><img src="img/logo/logo.png" width="100%" /></div>
                 <div class="icon">
                     <a href="#"><img src="img/icons/menu-media.png" /></a>
                 </div>
@@ -89,7 +65,7 @@
         <!-- section menu -->
         <section id="barra-menu" class="menu">
             <div class="menu-content">
-                <div class="logo"><img src="img/logo.png"></div>
+                <div class="logo"><img src="img/logo/logo.png"></div>
                 <ul id="menu">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about-us">QUEM SOMOS</a></li>
@@ -106,13 +82,15 @@
             <div class="column-one">
                 <div class="circle-one"></div>
                 <h2>O PROJETO</h2>
-                <p>O projeto “Eu Conto” é uma organização sem fins lucrativos idealizada pelos universitários dos cursos de Engenharia e Computação do CEUNES/UFES em 2016.</br></br> Possui como proposta a disponibilização de histórias inspiradoras escritas e contadas pelos próprios voluntários do projeto.</br></br> As histórias têm como objetivo geral promover o conhecimento histórico e cultural do município de São Mateus, além de contar sobre a vida de cientistas, empreendedores e grandes personalidades do cenário mundial.</p>
+                <p>O Projeto "Eu Conto" é uma organização sem fins lucrativos idealizado por universitários de Engenharias e Ciências da Computação do CEUNES/UFES. Nasceu em 2016 e possui como proposta principal a disponibilização de histórias inspiradoras escritas e contadas pelos membros da empresa júnior Adapti.
+                    <br/>
+                    <br/> Todas as histórias têm como objetivo promover o conhecimento histórico e cultural do município de São Mateus e região, além de contar histórias inspiradoras de cientistas, empreendedores e grandes personagens do cenário mundial. As histórias são convertidas em vídeos e disponibilizadas nesta plataforma.</p>
             </div>
 
             <div class="column-two">
                 <div class="circle-two"></div>
                 <h2>MISSÃO</h2>
-                <p>Como objetivos específicos, pode-se citar o envolvimento e o alcance de diversos alunos das escolas que participarão do projeto, bem como a busca pela motivação dos mesmos, de forma que esses possam ver nas histórias contadas uma realidade possível e inspiradora.</br></br>As narrativas são contadas de forma infantilizadas, podendo assim abranger todas as faixas etárias.</br></br> As histórias então são convertidas em vídeos e disponibilizadas nesta plataforma, sendo que essas também são apresentadas presencialmente em datas comemorativas nas escolas. </p>
+                <p>Envolver e fomentar diversos estudantes a participarem do projeto tornando um meio de aproximação cultural e social. As narrativas são contadas de forma única e infantilizada abordando diversos temas como forma de abranger todas as faixas etárias e desenvolver uma sociedade mais consciente e inspiradora.</p>
             </div>
         </section>
 
@@ -126,16 +104,12 @@
 
                 <!-- 1 item portoflio-->
                 <ul class="filterOptions" id="filterOptions">
-                   <li><a href="#" class="active all">Todas as Histórias</a></li>
-                   <!-- <li><a href="#" class="port01">Historia01</a></li>
-                    <li><a href="#" class="port02">Historia02</a></li>
-                    <li><a href="#" class="port03">Historia03</a></li>-->
+                    <li><a class="active all">Todas as Histórias</a></li>
                 </ul>
 
                 <ul class="grid" id="grid">
-				
 
-                    <li class="all port01">
+                    <li>
                         <a id="myBtn1" href="#">
                             <img src="img/portfolio/10.jpeg" alt="" />
                             <div id="01" class="text">
@@ -146,7 +120,7 @@
                         </a>
                     </li>
 
-				<!--	<li class="all port02">
+                    <!--<li class="all port02">
                         <a id="myBtn2" href="#">
                             <img src="img/portfolio/1.png" alt="" />
                             <div id="02" class="text">
@@ -157,7 +131,7 @@
                         </a>
                     </li>-->
 
-				<!--	<li class="all port03">
+                    <!--	<li class="all port03">
                         <a id="myBtn3" href="#">
                             <img src="img/portfolio/3.png" alt="" />
                             <div id="03" class="text">
@@ -171,21 +145,23 @@
             </div>
         </section>
 
+        <div class="clear"></div>
+
         <!-- Modals -->
         <div id="myModal1" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close"></span>
                 </div>
-                <div class="modal-body">
-                    <video id="video1" width="800" controls>
-                        <source src="videos/EuContoOficial.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <video id="video1" controls class="modal-body">
+
+                    <source src="videos/EuContoOficial.mp4" type="video/mp4" allowfullscreen>
+                </video>
+
             </div>
         </div>
 
-       <!-- <div id="myModal2" class="modal">
+        <!-- <div id="myModal2" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close"></span>
@@ -210,6 +186,7 @@
                 </div>
             </div>
         </div>-->
+
         <div class="clear"></div>
 
         <!-- partners-->
@@ -218,10 +195,7 @@
             <div class="content">
                 <h2>PARCEIROS</h2>
                 <div class="logo">
-                    <a href="http://www.adapti.info" target="_blank"><img src="img/logos/adapti.png"></a>
-                    <!--<a href="#"><img src="img/logos/archiq.png"></a>
-                    <a href="#"><img src="img/logos/thomsoon.png"></a>
-                    <a href="#"><img src="img/logos/alex2.png"></a>-->
+                    <a href="http://www.adapti.info" target="_blank"><img src="img/parceiros/adapti.png"></a>
                 </div>
             </div>
         </section>
@@ -232,29 +206,24 @@
             <hr/>
             <div class="content">
                 <div class="form">
-                    <form action="#" method="post" enctype="text/plain">
-                        <input name="your-name" id="your-name" placeholder="Digite seu nome completo" required />
-                        <input name="your-email" id="your-email" placeholder="Digite seu e-email" required />
-                        <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+                    <form action="enviar.php" method="POST">
+                        <input type="text" name="nome" placeholder="Digite seu nome completo" required />
+                        <input type="email" name="email" placeholder="Digite seu e-email" required />
+                        <textarea type="text" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
                         <button class="button" type="submit"><span>ENVIAR</span></button>
                     </form>
                 </div>
                 <div class="contact-text">
-                    Para contactar-nos por favor utilize o formulário ao lado
+                    Você tem uma história/sugestão que mereça ser contada?
                     <br/>
-                    <br/> Para enviar anexos, utilize o e-mail abaixo
-                    <br/></br>
-                    <strong>Nome do responsavel</strong>
-                    <br/>
-                    <br/> e-mail: <strong>email@email.com</strong>
+                    <br/> Utilize o formulário ao lado ou envie para <strong>projetoeuconto@gmail.com</strong>
                 </div>
             </div>
         </section>
 
         <section class="footer">
             <div class="margin">
-                <div class="copyright">
-                    © Eu Conto 2016. Todos os direitos reservados.</div>
+                <div class="copyright">Copyright © 2016<a href="http://www.adapti.info" target="_blank"> Adapti</a> - Todos os direitos reservados.</div>
             </div>
         </section>
     </div>
@@ -262,15 +231,15 @@
     <!-- Scripts -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- jQuery -->
-    <script src="js/jquery.parallax.js"></script>
+    <script src="js/jquery.parallax.js?date=<?php echo'datetime();'?>"></script>
     <!-- jQuery Parallax -->
-    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/jquery.nicescroll.js?date=<?php echo'datetime();'?>"></script>
     <!-- jQuery NiceScroll -->
-    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.sticky.js?date=<?php echo'datetime();'?>"></script>
     <!-- jQuery Stick Menu -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?date=<?php echo'datetime();'?>"></script>
     <!-- All script -->
-    <script src="js/script.modal.js"></script>
+    <script src="js/script.modal.js?date=<?php echo'datetime();'?>"></script>
 </body>
 
 </html>

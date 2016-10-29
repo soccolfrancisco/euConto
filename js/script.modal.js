@@ -19,7 +19,10 @@ btn1.onclick = function () {
     text01.style.display = "none";
     //text02.style.display = "none";
     //text03.style.display = "none";
-    menu.style.display = "none";
+    if (document.body.scrollWidth > 690) {
+        menu.style.display = "none";
+    }
+
     video1.paly();
 }
 
@@ -49,11 +52,13 @@ btn3.onclick = function () {
 span.onclick = function () {
     modal1.style.display = "none";
     //modal2.style.display = "none";
-   // modal3.style.display = "none";
+    // modal3.style.display = "none";
     text01.style.display = "block";
     //text02.style.display = "block";
     //text03.style.display = "block";
-    menu.style.display = "block";
+    if (document.body.scrollWidth > 690) {
+        menu.style.display = "block";
+    }
     video1.pause();
     //video2.pause();
     //video3.pause();
@@ -66,7 +71,9 @@ window.onclick = function (event) {
         text01.style.display = "block";
         //text02.style.display = "block";
         //text03.style.display = "block";
-        menu.style.display = "block";
+        if (document.body.scrollWidth > 690) {
+            menu.style.display = "block";
+        }
         video1.pause();
     }
     /*if (event.target == modal2) {
