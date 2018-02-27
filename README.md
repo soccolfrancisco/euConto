@@ -10,6 +10,6 @@ mundial. As histórias são convertidas em vídeos e disponibilizadas nesta plat
 
 ### Como Funciona?
 
-Faça o download do projeto e acessa o arquivo index.html em seu navegador.
+Faça o download do projeto e acessa o arquivo `index.html` em seu navegador.
 
 Pronto!
